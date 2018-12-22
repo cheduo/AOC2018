@@ -1,5 +1,12 @@
+system "l d0.q";
 system "cd /home/chenduo/Projects/QProject/aoc";
-// part 1
-sum 1<count each g:group raze raze l:{(,\:/:)./:x[;0 1]+'til each'x[;2 3]}{"J"$x@/:'_'[(where 1<deltas @)each i;]i:where each x in .Q.n}i:read0`:aoc3
-// part 2
-value 1_first"@"vs first i where all each 1=count each'raze each((!/)(`u# key@;value)@\:g)l
+// d1
+sum l:"J"$read0`:d1 // part1
+c: @'[;1]::=:;
+r min c r:(min null c@) {y,last[y]+\x}[l]/(),0 // part1
+// d2
+prd sum (2 3 in count@'group@)@'l:read0`:d2
+{x where x=y}. l where max@'1=sum@''l<>/:\:l
+// d3
+sum 1<g:count@'group raze l:(cross/')sum @[;1;til'']flip(0@'ssr[;"[:x]";" "]@'-2#" " vs)@'read0`:d3 // part1
+1+where all@'!/[(`u#key@;value)@\:1=g]l // part2
