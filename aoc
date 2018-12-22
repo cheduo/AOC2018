@@ -1,0 +1,5 @@
+system "cd /home/chenduo/Projects/QProject/aoc";
+// part 1
+sum 1<count each g:group raze raze l:{(,\:/:)./:x[;0 1]+'til each'x[;2 3]}{"J"$x@/:'_'[(where 1<deltas @)each i;]i:where each x in .Q.n}i:read0`:aoc3
+// part 2
+value 1_first"@"vs first i where all each 1=count each'raze each((!/)(`u# key@;value)@\:g)l
