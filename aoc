@@ -1,4 +1,3 @@
-system "l d0.q";
 system "cd /home/chenduo/Projects/QProject/aoc";
 // d1
 sum l:"J"$read0`:d1 // part1
@@ -10,3 +9,12 @@ prd sum (2 3 in count@'group@)@'l:read0`:d2
 // d3
 sum 1<g:count@'group raze l:(cross/')sum @[;1;til'']flip(0@'ssr[;"[:x]";" "]@'-2#" " vs)@'read0`:d3 // part1
 1+where all@'!/[(`u#key@;value)@\:1=g]l // part2
+// d4
+g : {(raze {x+til y-x}.' 2 cut)@'group (!/)flip(x,'fills y) where null y} . ("J J  ";" ")0:15_'except\:[;"]#"] asc read0`:d4;
+p*first idesc count@'group g p:first idesc sum@'g // part1
+i*first idesc gx i: first idesc gx:(desc count@'=:)@'g // part2
+// d5
+i : "i"$first read0 `:d5;
+tf: {x where not max 1 next\ min 1 differ\ 32=abs deltas x}/;
+count tf i // part1
+min (count tf i except 0 32+)@'"i"$.Q.A // part2
