@@ -18,3 +18,9 @@ i : "i"$first read0 `:d5;
 tf: {x where not max 1 next\ min 1 differ\ 32=abs deltas x}/;
 count tf i // part1
 min (count tf i except 0 32+)@'"i"$.Q.A // part2
+// d6
+t : sum @'' abs l-\:/:c:(cross/) til@'max l:l-\:min l:0@'read0 `:d6;
+d : group (!/)(c;(first where@)'[p])@\:where 1=sum @' p:t=min flip t;
+d[;;0]
+{x?min x}min@'d[;;0]
+min@'d
