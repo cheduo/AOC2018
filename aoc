@@ -19,8 +19,6 @@ tf: {x where not max 1 next\ min 1 differ\ 32=abs deltas x}/;
 count tf i // part1
 min (count tf i except 0 32+)@'"i"$.Q.A // part2
 // d6
-t : sum @'' abs l-\:/:c:(cross/) til@'max l:l-\:min l:0@'read0 `:d6;
-d : group (!/)(c;(first where@)'[p])@\:where 1=sum @' p:t=min flip t;
-d[;;0]
-{x?min x}min@'d[;;0]
-min@'d
+p : where @'d=min@'d:sum @'' abs l-\:/:i:(cross/) til@'max l:l-\:min l:0@'read0`:d6;
+max (distinct raze p where any raze flip[i]=/:(0;max i)) _ count@'group p[;0] where 1=count@'p // part1
+sum 10000>sum@'d // part2
